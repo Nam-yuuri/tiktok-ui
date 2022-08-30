@@ -14,6 +14,7 @@
 .inner {
     height: 100%;
     width: var(--default-layout-width, 1150px);
+    padding: 0 var(--default-layout-horizontal-spacer);
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -66,13 +67,12 @@
     }
 }
 
-.search-title{
+.search-title {
     padding: 5px 12px;
     font-size: 1.4rem;
     font-weight: 600;
     color: rgb(22, 24, 35, 0.5);
 }
-
 
 .clear,
 .loading {
@@ -101,11 +101,10 @@
     }
 }
 
-.more-btn{
+.more-btn {
     font-size: 2rem;
     margin-left: 24px;
     padding: 4px 8px;
     background-color: transparent;
+    cursor: pointer;
 }
-
-  

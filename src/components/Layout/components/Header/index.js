@@ -27,6 +27,49 @@ const MENU_ITEMS = [
     {
         icon: <FontAwesomeIcon icon={faEarthAsia} />,
         title: 'English',
+        children: {
+            title: 'language',
+            data: [
+                {
+                    code: 'en',
+                    title: 'English',
+                },
+                {
+                    code: 'vi',
+                    title: 'Tiếng Việt',
+                    // children: {
+                    //     title: 'language',
+                    //     data: [
+                    //         {
+                    //             code: 'en',
+                    //             title: 'English 1',
+                    //         },
+                    //         {
+                    //             code: 'vi',
+                    //             title: 'Tiếng Việt 1',
+                    //             children: {
+                    //                 title: 'language',
+                    //                 data: [
+                    //                     {
+                    //                         code: 'en',
+                    //                         title: 'English 2',
+                    //                     },
+                    //                     {
+                    //                         code: 'vi',
+                    //                         title: 'Tiếng Việt 2',
+                    //                     },
+                    //                     {
+                    //                         code: 'vi',
+                    //                         title: 'Tiếng Việt 2',
+                    //                     },
+                    //                 ],
+                    //             },
+                    //         },
+                    //     ],
+                    // },
+                },
+            ],
+        },
     },
     {
         icon: <FontAwesomeIcon icon={faCircleQuestion} />,
@@ -41,11 +84,22 @@ const MENU_ITEMS = [
 
 function Header() {
     const [searchResult, setsearchResult] = useState([]);
+
     useEffect(() => {
         setTimeout(() => {
             setsearchResult([]);
         }, 0);
     }, []);
+
+    // Handle logic
+    const handleMenuChange = (menuItem) => {
+        switch (menuItem.type) {
+            case 'language':
+                // handle change language
+                break;
+            default:
+        }
+    };
 
     return (
         <header className={cx('wrapper')}>
@@ -82,7 +136,7 @@ function Header() {
                     <Button text>Upload</Button>
                     <Button primary>Log in</Button>
 
-                    <Menu items={MENU_ITEMS}>
+                    <Menu items={MENU_ITEMS} onChange={handleMenuChange}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
                         </button>
