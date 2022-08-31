@@ -19,6 +19,7 @@
         font-size: 1.6rem;
         background-color: transparent;
         caret-color: var(--primary);
+        padding-right: 45px;
     }
 
     input:not(:placeholder-shown) ~ .search-btn {
@@ -54,6 +55,19 @@
     top: 50%;
     transform: translateY(-50%);
     color: rgb(22, 24, 35, 0.34);
+}
+
+.loading{
+    animation: spinner 0.8s linear infinite;
+}
+
+@keyframes spinner {
+    from{
+        transform: translateY(-50%) rotate(0);
+    }
+    to{
+        transform: translateY(-50%) rotate(360deg);
+    }
 }
 
 .search-btn {
