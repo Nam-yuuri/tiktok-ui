@@ -18,19 +18,19 @@ function Button({
     className,
     leftIcon,
     rightIcon,
-    onclick,
+    onClick,
     ...passProps
 }) {
     let Comp = 'button';
     const props = {
-        onclick,
+        onClick,
         ...passProps,
     };
 
     if (disabled) {
         // Dùng 1 trong 2 cách
         // cach 1
-        // delete props.onclick;
+        // delete props.onClick;
 
         // cach 2
         Object.keys(props).forEach((key) => {
