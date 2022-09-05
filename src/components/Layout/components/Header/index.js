@@ -11,9 +11,10 @@ import {
     faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import Tippy from '@tippyjs/react';
-
+import { Link } from 'react-router-dom';
 import 'tippy.js/dist/tippy.css';
 
+import routesConfig from '~/config/routes'
 import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
@@ -124,7 +125,9 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img className={cx('img-logo')} src={images.logo} alt="TikTok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    <img className={cx('img-logo')} src={images.logo} alt="TikTok" />
+                </Link>
 
                 <Search />
 
@@ -158,7 +161,7 @@ function Header() {
                         {currentUser ? (
                             <Image
                                 className={cx('user-avatar')}
-                                src="http:0068-aiso/e439be2f7c79e09e67aa148c5509a61b~c5_100x100.jpeg?x-expires=1661997600&x-signature=Ig%2BQc5nrfC8yboeYpJRZZ%2BB%2F%2Fg8%3D"
+                                src="https://p16-sign-va.tiktokcdn.com/tos-useast2a-avt-0068-giso/f89b316574f8f0ab300e20d4b7ff6a29~c5_100x100.jpeg?x-expires=1662519600&x-signature=VcNHI3x8nEh1Yp%2BmtOm1PlvDMlg%3D"
                                 alt="nguyen van a"
                                 // fallback="https://p16-sign-va.tiktokcdn.com/tos-maliva-avt-0068/7137581727107448838~c5_720x720.jpeg?x-expires=1662019200&x-signature=xZUpah6vVNUB%2Fi%2FN2eukpzOiL7Q%3D"
                             />

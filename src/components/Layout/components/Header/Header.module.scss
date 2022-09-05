@@ -20,15 +20,17 @@
     justify-content: space-between;
 }
 
-.img-logo{
+.logo-link {
+    display: flex;
+}
+
+.img-logo {
     cursor: pointer;
 }
 // .logo {
 //     display: flex;
 //     align-items: center;
 // }
-
-
 
 // Actions
 .action {
@@ -54,7 +56,7 @@
     align-items: center;
 
     span {
-        font-family: 'ProximaNova';
+        font-family: var(--font-family);
         font-style: normal;
         font-weight: 600;
         font-size: 16px;
@@ -71,16 +73,16 @@
     border: 1px solid rgba(22, 24, 35, 0.12);
     padding: 4px 16px;
 
-    .upload-icon{
+    .upload-icon {
         margin-right: 8px;
     }
 
-    &:hover{
+    &:hover {
         background-color: rgba(22, 24, 35, 0.03);
     }
 }
 
-.action-btn_inbox{
+.action-btn_inbox {
     padding: 4px 7px;
 }
 

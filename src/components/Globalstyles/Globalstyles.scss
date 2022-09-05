@@ -6,6 +6,8 @@
     --white: #fff;
     --text-color: #161823;
 
+    --font-family: 'ProximaNova', 'sans-serif';
+
     // Defalt layout
     --default-layout-header-height: 60px;
     --default-layout-width: 1150px;
@@ -38,7 +40,7 @@ body::-webkit-scrollbar-thumb {
 
 body {
     // font-family: 'Poppins', 'sans-serif';
-    font-family: 'ProximaNova', 'sans-serif';
+    font-family: var(--font-family);
     font-size: 1.6rem;
     line-height: 1.5;
     text-rendering: optimizeSpeed;
