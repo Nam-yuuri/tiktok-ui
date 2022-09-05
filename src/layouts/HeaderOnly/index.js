@@ -1,4 +1,4 @@
-import Header from '~/components/Layout/components/Header';
+import Header from '~/layouts/components/Header';
 
 function HeaderOnly({ children }) {
     return (
@@ -12,4 +12,3 @@ function HeaderOnly({ children }) {
 }
 
 export default HeaderOnly;
- 
