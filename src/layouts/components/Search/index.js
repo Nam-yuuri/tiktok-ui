@@ -6,7 +6,7 @@ import * as searchServices from '~/services/searchService';
 import HeadlessTippy from '@tippyjs/react/headless';
 import classNames from 'classnames/bind';
 import { Wrapper as PopperWrapper } from '~/components/Popper';
-import Accountitem from '~/components/Accountitem';
+import AccountItem from '~/components/Accountitem';
 import { SearchIcon } from '~/components/Icons';
 import { useDebounce } from '~/hooks';
 import styles from './Search.module.scss';
@@ -71,7 +71,7 @@ function Search() {
                         <PopperWrapper>
                             <h4 className={cx('search-title')}>Accounts</h4>
                             {searchResult.map((result) => (
-                                <Accountitem key={result.id} data={result} />
+                                <AccountItem key={result.id} data={result} />
                             ))}
                         </PopperWrapper>
                     </div>

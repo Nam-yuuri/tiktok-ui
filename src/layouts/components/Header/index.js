@@ -39,36 +39,36 @@ const MENU_ITEMS = [
                 {
                     code: 'vi',
                     title: 'Tiếng Việt',
-                    // children: {
-                    //     title: 'language',
-                    //     data: [
-                    //         {
-                    //             code: 'en',
-                    //             title: 'English 1',
-                    //         },
-                    //         {
-                    //             code: 'vi',
-                    //             title: 'Tiếng Việt 1',
-                    //             children: {
-                    //                 title: 'language',
-                    //                 data: [
-                    //                     {
-                    //                         code: 'en',
-                    //                         title: 'English 2',
-                    //                     },
-                    //                     {
-                    //                         code: 'vi',
-                    //                         title: 'Tiếng Việt 2',
-                    //                     },
-                    //                     {
-                    //                         code: 'vi',
-                    //                         title: 'Tiếng Việt 2',
-                    //                     },
-                    //                 ],
-                    //             },
-                    //         },
-                    //     ],
-                    // },
+                    children: {
+                        title: 'language1',
+                        data: [
+                            {
+                                code: 'en',
+                                title: 'English 1',
+                            },
+                            {
+                                code: 'vi',
+                                title: 'Tiếng Việt 1',
+                                children: {
+                                    title: 'language2',
+                                    data: [
+                                        {
+                                            code: 'en',
+                                            title: 'English 2',
+                                        },
+                                        {
+                                            code: 'vi',
+                                            title: 'Tiếng Việt 2',
+                                        },
+                                        {
+                                            code: 'vi',
+                                            title: 'Tiếng Việt 2',
+                                        },
+                                    ],
+                                },
+                            },
+                        ],
+                    },
                 },
             ],
         },
