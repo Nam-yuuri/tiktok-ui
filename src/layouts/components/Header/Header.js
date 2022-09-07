@@ -19,7 +19,18 @@ import Button from '~/components/Button';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 import Menu from '~/components/Popper/Menu';
-import { InboxIcon, MessageIcon, UploadIcon } from '~/components/Icons';
+import {
+    CoinsIcon,
+    FeedbackIcon,
+    InboxIcon,
+    KeyboardIcon,
+    LangueIcon,
+    LogoutIcon,
+    MessageIcon,
+    SettingIcon,
+    UploadIcon,
+    UserIcon,
+} from '~/components/Icons';
 import Image from '~/components/Image';
 import Search from '../Search';
 
@@ -27,7 +38,7 @@ const cx = classNames.bind(styles);
 
 const MENU_ITEMS = [
     {
-        icon: <FontAwesomeIcon icon={faEarthAsia} />,
+        icon: <LangueIcon />,
         title: 'English',
         children: {
             title: 'language',
@@ -74,12 +85,12 @@ const MENU_ITEMS = [
         },
     },
     {
-        icon: <FontAwesomeIcon icon={faCircleQuestion} />,
+        icon: <FeedbackIcon />,
         title: 'Feedback and help',
         to: '/feedback',
     },
     {
-        icon: <FontAwesomeIcon icon={faKeyboard} />,
+        icon: <KeyboardIcon />,
         title: 'Keyboard shortcuts',
     },
 ];
@@ -99,23 +110,23 @@ function Header() {
 
     const userMenu = [
         {
-            icon: <FontAwesomeIcon icon={faUser} />,
+            icon: <UserIcon />,
             title: 'View profile',
             to: '/@hoaa',
         },
         {
-            icon: <FontAwesomeIcon icon={faCoins} />,
+            icon: <CoinsIcon />,
             title: 'Get coins',
             to: '/coin',
         },
         {
-            icon: <FontAwesomeIcon icon={faGear} />,
+            icon: <SettingIcon />,
             title: 'Settings',
             to: '/Settings',
         },
         ...MENU_ITEMS,
         {
-            icon: <FontAwesomeIcon icon={faSignOut} />,
+            icon: <LogoutIcon />,
             title: 'Log out',
             to: '/logout',
             separate: true,
